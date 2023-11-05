@@ -9,7 +9,7 @@
     <button (click)="themeService.setTheme(ThemeName.light)">set light theme</button>
     <button (click)="themeService.setTheme(ThemeName.dark)">set dark theme</button>
     <button (click)="themeService.setTheme(ThemeName.alter)">set alternative theme</button>
-    <div>{{ (themeService.getTheme$() | async)?.name }}</div>
+    <div>theme: {{ (themeService.getTheme$() | async)?.name }}</div>
   </div>
 </div>
 

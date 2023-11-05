@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Subject, distinctUntilChanged, map } from 'rxjs';
-import { themeEntity } from './tokens';
+import { ReplaySubject, distinctUntilChanged, map } from 'rxjs';
 import { ThemeName } from './enums';
+import { themeEntity } from './tokens';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
-  private theme$ = new Subject<ThemeName>();
+  private theme$ = new ReplaySubject<ThemeName>(1);
 
   constructor() { }
 
