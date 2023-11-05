@@ -1,0 +1,15 @@
+<div theme class="app">
+  <div class="div">
+    <p class="p">
+      Some text
+    </p>
+  </div>
+
+  <div>
+    <button (click)="setActiveTheme(ThemeName.light)">set light theme</button>
+    <button (click)="setActiveTheme(ThemeName.dark)">set dark theme</button>
+    <button (click)="setActiveTheme(ThemeName.alter)">set alternative theme</button>
+    <div>{{ (activeTheme$ | async)?.name }}</div>
+  </div>
+</div>
+
