@@ -1,6 +1,7 @@
-import { Theme, ThemeEntity, ThemeName } from "./interfaces"
+import { ThemeName } from "./enums"
+import { Theme, ThemeEntity } from "./interfaces"
 
-export const light: Theme = {
+const light: Theme = {
   name: ThemeName.light,
   properties: {
     '--color-primary': 'red',
@@ -8,7 +9,7 @@ export const light: Theme = {
   }
 }
 
-export const dark: Theme = {
+const dark: Theme = {
   name: ThemeName.dark,
   properties: {
     '--color-primary': 'black',
@@ -16,7 +17,7 @@ export const dark: Theme = {
   }
 }
 
-export const alter: Theme = {
+const alter: Theme = {
   name: ThemeName.alter,
   properties: {
     '--color-primary': 'yellow',
